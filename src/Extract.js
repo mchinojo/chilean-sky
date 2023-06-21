@@ -1,4 +1,4 @@
-const extractPixelColor = (cols, x, y, data) => {
+const extractPixelColor = (cols, y, x, data) => {
   let pixel = cols * x + y;
   let position = pixel * 4;
   return {
@@ -12,7 +12,7 @@ const extractPixelColor = (cols, x, y, data) => {
 const pixelsToHex = (cols, y, data) => {
   let c = extractPixelColor(cols, 352, y, data);
   let hexCode = `#${[c.red, c.green, c.blue]
-    .map((x) => x.toString(16).padStart(2, "0"))
+    .map((code) => code.toString(16).padStart(2, "0"))
     .join("")}`;
   console.log(hexCode);
 };
@@ -29,9 +29,9 @@ function Extract() {
     const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const data = imgData.data;
     let cols = canvas.width;
-    let eyes = [338, 180, 5];
+    let exes = [5, 172, 340];
 
-    eyes.forEach((y) => pixelsToHex(cols, y, data));
+    exes.forEach((x) => pixelsToHex(cols, x, data));
   }
   return (
     <div>
@@ -41,6 +41,7 @@ function Extract() {
         id="skyImage"
         crossOrigin="Anonymous"
         src="/images/20230620122708.jpg"
+        // src="https://picsum.photos/704/480"
         onLoad={defineImage}
         style={{ display: "none" }}
       ></img>
