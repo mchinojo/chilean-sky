@@ -46,7 +46,7 @@ function Extract() {
         id="skyImage"
         alt="sky"
         crossOrigin="Anonymous"
-        src="/images/20230620122708.jpg"
+        src="http://localhost:8080/current-image"
         // src="https://picsum.photos/704/480"
         onLoad={defineImage}
         style={{ display: "none" }}
