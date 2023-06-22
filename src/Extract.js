@@ -41,7 +41,7 @@ function Extract() {
   return (
     <div>
       <Gradient colors={colorArray}></Gradient>
-      <canvas id="myCanvas"></canvas>
+      <canvas id="myCanvas" style={{ display: "none" }}></canvas>
       <img
         id="skyImage"
         alt="sky"
