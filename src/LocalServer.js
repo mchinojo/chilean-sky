@@ -1,11 +1,16 @@
 const express = require("express");
 const axios = require("axios");
-const app = express();
 const cors = require("cors");
-const PORT = 8080;
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
+const app = express();
+const PORT = 8080;
+
+app.use(cors());
+app.use(express.static("public"));
+
+// Function to fetch local server city weather
 function localServerCityWeather() {
   return axios
     .get("https://aipchile.dgac.gob.cl/metar/SCSN")
@@ -22,6 +27,7 @@ function localServerCityWeather() {
     });
 }
 
+// Function to fetch local server city name
 function localServerCityName() {
   return axios
     .get("https://aipchile.dgac.gob.cl/designador/SCSN")
@@ -31,7 +37,7 @@ function localServerCityName() {
         .querySelector("#ubicacion + td")
         .innerHTML.split("\n")
         .map((text) => {
-          return text.trim();
+          return text.trim().replace("<!--<br/>-->", "");
         });
 
       return cityName;
@@ -41,10 +47,8 @@ function localServerCityName() {
     });
 }
 
-app.use(cors());
-app.use(express.static("public"));
-
-app.get("/current-image", function (req, res) {
+// Function to fetch current image
+function fetchCurrentImage(req, res) {
   axios
     .get("https://aipchile.dgac.gob.cl/camara/show/id/40")
     .then(function (response) {
@@ -58,8 +62,12 @@ app.get("/current-image", function (req, res) {
         axiosResp.data.pipe(res);
       });
     });
-});
+}
 
+// Route to fetch current image
+app.get("/current-image", fetchCurrentImage);
+
+// Route to fetch city weather and name
 app.get("/api/city-weather", async (req, res) => {
   const cityWeather = await localServerCityWeather();
   const cityName = await localServerCityName();

@@ -23,8 +23,8 @@ function CityTitle() {
   }, []);
 
   return (
-    <div className={`fade-in ${show ? "visible" : ""}`}>
-      {show && <h1 className="title">{nameArray[1]}</h1>}
+    <div className={`fade-in-title ${show ? "visible-title" : ""}`}>
+      {show && <h1 className="title">{nameArray.slice(1, 5).join(" ")}</h1>}
     </div>
   );
 }
