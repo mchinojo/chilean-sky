@@ -1,0 +1,12 @@
+{
+    "santo-domingo": {
+        "urlData": "https://aipchile.dgac.gob.cl/metar/SCSN",
+        "urlName": "https://aipchile.dgac.gob.cl/designador/SCSN",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/40"
+    },
+    "santiago": {
+        "urlData": "https://aipchile.dgac.gob.cl/metar/SCEL",
+        "urlName": "https://aipchile.dgac.gob.cl/designador/SCEL",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/12"
+    }
+}

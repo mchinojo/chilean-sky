@@ -1,8 +1,8 @@
 import axios from "axios";
 
-function fetchCityWeather() {
+function fetchCityWeather(city) {
   return axios
-    .get("http://localhost:8080/api/city-weather")
+    .get(`http://localhost:8080/api/city-weather/${city}`)
     .then(function (response) {
       return response.data;
     })

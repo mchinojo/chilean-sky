@@ -1,10 +1,13 @@
-import "./CityTitle.css";
+import "./CityName.css";
 import React, { useState, useEffect } from "react";
 import fetchCityWeather from "./fetchCityWeather";
 
-function CityTitle() {
+function CityName() {
   const [show, setShow] = useState(false);
   const [nameArray, setNameArray] = useState([]);
+
+  // this city should come from react router
+  const city = "santo-domingo";
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -17,16 +20,16 @@ function CityTitle() {
   }, []);
 
   useEffect(() => {
-    fetchCityWeather().then(function (response) {
+    fetchCityWeather(city).then(function (response) {
       setNameArray(response.cityName);
     });
   }, []);
 
   return (
-    <div className={`fade-in-title ${show ? "visible-title" : ""}`}>
-      {show && <h1 className="title">{nameArray.slice(1, 5).join(" ")}</h1>}
+    <div className={`title fade-in-title ${show ? "visible-title" : ""}`}>
+      {nameArray.slice(1, 5).join(" ")}
     </div>
   );
 }
 
-export default CityTitle;
+export default CityName;

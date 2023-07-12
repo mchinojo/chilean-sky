@@ -3,6 +3,8 @@
   font-weight: 300;
   font-size: 1.5rem;
   color: wheat;
+  position: absolute;
+  left: 28%;
 }
 
 .fade-in-title {

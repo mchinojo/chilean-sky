@@ -1,10 +1,12 @@
-import "./CityText.css";
+import "./CityWeather.css";
 import React, { useState, useEffect } from "react";
 import fetchCityWeather from "./fetchCityWeather";
 
-function CityText() {
+function CityWeather() {
   const [show, setShow] = useState(false);
-  const [weatherArray, setWeatherArray] = useState([]);
+  const [weatherArray, setWeatherArray] = useState(null);
+  // esto va a venir de react router mas tarde
+  const city = "santo-domingo";
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -18,17 +20,19 @@ function CityText() {
 
   useEffect(() => {
     console.log("Fetching data...");
-    fetchCityWeather().then(function (response) {
+    fetchCityWeather(city).then(function (response) {
       console.log(response);
       setWeatherArray(response.cityWeather);
     });
   }, []);
 
   return (
-    <div className={`fade-in ${show ? "visible" : ""}`}>
-      {show && <h2 className="centered">{weatherArray[2]}</h2>}
+    <div className={`centered fade-in ${show ? "visible" : ""}`}>
+      {show && weatherArray && weatherArray.length > 0
+        ? weatherArray[0]
+        : "Despejado"}
     </div>
   );
 }
 
-export default CityText;
+export default CityWeather;

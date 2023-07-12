@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Gradient from "./Gradient";
 
 const extractPixelColor = (cols, y, x, data) => {
@@ -13,8 +13,8 @@ const extractPixelColor = (cols, y, x, data) => {
 };
 
 const pixelsToHex = (cols, y, data) => {
-  let c = extractPixelColor(cols, 352, y, data);
-  let hexCode = `#${[c.red, c.green, c.blue]
+  let pixelColor = extractPixelColor(cols, 352, y, data);
+  let hexCode = `#${[pixelColor.red, pixelColor.green, pixelColor.blue]
     .map((code) => code.toString(16).padStart(2, "0"))
     .join("")}`;
 
@@ -23,6 +23,9 @@ const pixelsToHex = (cols, y, data) => {
 
 function Extract() {
   const [colorArray, setColorArray] = useState([]);
+  // esto va a venir de react router mas tarde
+  const city = "santo-domingo";
+
   function defineImage() {
     const canvas = document.getElementById("myCanvas");
     const img = document.getElementById("skyImage");
@@ -46,7 +49,7 @@ function Extract() {
         id="skyImage"
         alt="sky"
         crossOrigin="Anonymous"
-        src="http://localhost:8080/current-image"
+        src={`http://localhost:8080/current-image/${city}`}
         // src="https://picsum.photos/704/480"
         onLoad={defineImage}
         style={{ display: "none" }}
