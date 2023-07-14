@@ -4,15 +4,18 @@ import CityButtons from "./CityButtons";
 import CityWeather from "./CityWeather";
 import CityName from "./CityName";
 import Card from "react-bootstrap/Card";
+import { useState } from "react";
 
 function App() {
-  const onClickCityButtons = (cityName) => {
-    console.log(`city was clicked: ${cityName}`);
+  const [selectedCity, setSelectedCity] = useState("santo-domingo");
+
+  const onClickCityButtons = (cityID) => {
+    setSelectedCity(cityID);
   };
 
   return (
     <div className="App">
-      <Extract city={"santo-domingo"}></Extract>
+      <Extract city={selectedCity}></Extract>
       <Card>
         <Card.Body>
           <div className="row">

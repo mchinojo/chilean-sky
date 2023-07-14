@@ -13,7 +13,7 @@ function CityButtons(props) {
               key={city.cityID}
               action
               onClick={() => {
-                props.onClickCityButtons(city.cityName);
+                props.onClickCityButtons(city.cityID);
               }}
             >
               {city.cityName}
