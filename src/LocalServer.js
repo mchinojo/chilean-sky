@@ -99,6 +99,7 @@ app.get("/current-image/:city", function (req, res) {
 // Route to fetch city weather and name
 app.get("/api/city-weather/:city", async (req, res) => {
   const city = req.params.city;
+  console.log(city);
   const cityWeather = await localServerCityWeather(city);
   const cityName = await localServerCityName(city);
   return res.send({ cityWeather, cityName });

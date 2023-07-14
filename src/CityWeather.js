@@ -1,11 +1,12 @@
 import "./CityWeather.css";
 import React, { useState, useEffect } from "react";
 import fetchCityWeather from "./fetchCityWeather";
+import cities from "./components/data/cities.json";
 
 function CityWeather() {
   const [show, setShow] = useState(false);
   const [weatherArray, setWeatherArray] = useState(null);
-  // esto va a venir de react router mas tarde
+  // need to link my json file data to this
   const city = "santo-domingo";
 
   useEffect(() => {
@@ -24,7 +25,7 @@ function CityWeather() {
       console.log(response);
       setWeatherArray(response.cityWeather);
     });
-  }, []);
+  }, [city]);
 
   return (
     <div className={`centered fade-in ${show ? "visible" : ""}`}>

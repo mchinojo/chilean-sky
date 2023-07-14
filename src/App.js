@@ -7,15 +7,15 @@ import Card from "react-bootstrap/Card";
 
 function App() {
   return (
-    <div class="App">
-      <Extract></Extract>
+    <div className="App">
+      <Extract city={"santo-domingo"}></Extract>
       <Card>
         <Card.Body>
-          <div class="row">
-            <div class="buttons col-2">
-              <CityButtons />
+          <div className="row">
+            <div className="buttons col-2">
+              <CityButtons onSelectCity={() => {}} />
             </div>
-            <div class="col-10">
+            <div className="col-10">
               <Card.Subtitle>
                 <CityName></CityName>
               </Card.Subtitle>

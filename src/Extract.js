@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Gradient from "./Gradient";
+import fetchCityWeather from "./fetchCityWeather";
 
-const extractPixelColor = (cols, y, x, data) => {
-  let pixel = cols * x + y;
-  let position = pixel * 4;
+const getPixelColor = (imageWidth, x, y, pixelData) => {
+  let pixelIndex = imageWidth * y + x;
+  let position = pixelIndex * 4;
   return {
-    red: data[position],
-    green: data[position + 1],
-    blue: data[position + 2],
-    alpha: data[position + 3],
+    red: pixelData[position],
+    green: pixelData[position + 1],
+    blue: pixelData[position + 2],
+    alpha: pixelData[position + 3],
   };
 };
 
-const pixelsToHex = (cols, y, data) => {
-  let pixelColor = extractPixelColor(cols, 352, y, data);
+const getHexCodeFromPixels = (imageWidth, x, pixelData) => {
+  let pixelColor = getPixelColor(imageWidth, 352, x, pixelData);
   let hexCode = `#${[pixelColor.red, pixelColor.green, pixelColor.blue]
     .map((code) => code.toString(16).padStart(2, "0"))
     .join("")}`;
@@ -21,12 +22,10 @@ const pixelsToHex = (cols, y, data) => {
   return hexCode;
 };
 
-function Extract() {
+function Extract({ city }) {
   const [colorArray, setColorArray] = useState([]);
-  // esto va a venir de react router mas tarde
-  const city = "santo-domingo";
 
-  function defineImage() {
+  function handleImageLoad() {
     const canvas = document.getElementById("myCanvas");
     const img = document.getElementById("skyImage");
     canvas.width = img.width;
@@ -34,13 +33,23 @@ function Extract() {
     let ctx = canvas.getContext("2d");
     ctx.drawImage(img, 0, 0);
 
-    const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const data = imgData.data;
-    let cols = canvas.width;
-    let exes = [5, 172, 340];
-    let colors = exes.map((x) => pixelsToHex(cols, x, data));
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const pixelData = imageData.data;
+    let imageWidth = canvas.width;
+    let yValues = [5, 172, 340];
+    let colors = yValues.map((y) =>
+      getHexCodeFromPixels(imageWidth, y, pixelData)
+    );
     setColorArray(colors);
   }
+
+  useEffect(() => {
+    fetchCityWeather(city).then(function (response) {
+      const colors = response.colors;
+      setColorArray(colors);
+    });
+  }, [city]);
+
   return (
     <div>
       <Gradient colors={colorArray}></Gradient>
@@ -51,7 +60,7 @@ function Extract() {
         crossOrigin="Anonymous"
         src={`http://localhost:8080/current-image/${city}`}
         // src="https://picsum.photos/704/480"
-        onLoad={defineImage}
+        onLoad={handleImageLoad}
         style={{ display: "none" }}
       ></img>
     </div>
