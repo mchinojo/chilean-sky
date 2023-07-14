@@ -6,6 +6,10 @@ import CityName from "./CityName";
 import Card from "react-bootstrap/Card";
 
 function App() {
+  const onClickCityButtons = (cityName) => {
+    console.log(`city was clicked: ${cityName}`);
+  };
+
   return (
     <div className="App">
       <Extract city={"santo-domingo"}></Extract>
@@ -13,7 +17,7 @@ function App() {
         <Card.Body>
           <div className="row">
             <div className="buttons col-2">
-              <CityButtons onSelectCity={() => {}} />
+              <CityButtons onClickCityButtons={onClickCityButtons} />
             </div>
             <div className="col-10">
               <Card.Subtitle>

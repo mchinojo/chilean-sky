@@ -1,18 +1,25 @@
 import ListGroup from "react-bootstrap/ListGroup";
+import cities from "./components/data/cities.json";
 
-function CityButtons({ onSelectCity }) {
-  const handleCityClick = (city) => {
-    onSelectCity(city);
-  };
+function CityButtons(props) {
+  const citiesArray = Object.values(cities);
+
   return (
     <header id="topPage">
       <ListGroup defaultActiveKey="#link1">
-        <ListGroup.Item action onClick={() => handleCityClick("santiago")}>
-          Santiago
-        </ListGroup.Item>
-        <ListGroup.Item action onClick={() => handleCityClick("santo-domingo")}>
-          Santo Domingo
-        </ListGroup.Item>
+        {citiesArray.map((city) => {
+          return (
+            <ListGroup.Item
+              key={city.cityID}
+              action
+              onClick={() => {
+                props.onClickCityButtons(city.cityName);
+              }}
+            >
+              {city.cityName}
+            </ListGroup.Item>
+          );
+        })}
       </ListGroup>
     </header>
   );
