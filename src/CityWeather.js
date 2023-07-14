@@ -1,37 +1,28 @@
 import "./CityWeather.css";
 import React, { useState, useEffect } from "react";
 import fetchCityWeather from "./fetchCityWeather";
-import cities from "./components/data/cities.json";
 
-function CityWeather() {
+function CityWeather(props) {
   const [show, setShow] = useState(false);
-  const [weatherArray, setWeatherArray] = useState(null);
-  // need to link my json file data to this
-  const city = "santo-domingo";
+  const [weather, setWeather] = useState();
+  const city = props.city;
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setShow(true);
-    }, 5000);
+    setShow(false);
+    setWeather();
 
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, []);
-
-  useEffect(() => {
     console.log("Fetching data...");
     fetchCityWeather(city).then(function (response) {
       console.log(response);
-      setWeatherArray(response.cityWeather);
+      setWeather(response.cityWeather[0]);
+      setShow(true);
     });
   }, [city]);
 
   return (
     <div className={`centered fade-in ${show ? "visible" : ""}`}>
-      {show && weatherArray && weatherArray.length > 0
-        ? weatherArray[0]
-        : "Despejado"}
+      {show && weather ? weather : ""}
+      {show && !weather ? "Despejado" : ""}
     </div>
   );
 }

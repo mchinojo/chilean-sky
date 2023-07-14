@@ -27,7 +27,7 @@ function App() {
                 <CityName></CityName>
               </Card.Subtitle>
               <Card.Title>
-                <CityWeather></CityWeather>
+                <CityWeather city={selectedCity}></CityWeather>
               </Card.Title>
             </div>
           </div>

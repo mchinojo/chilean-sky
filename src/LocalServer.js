@@ -29,7 +29,8 @@ function localServerCityWeather(city) {
         return (
           !phrase.includes(":") &&
           !phrase.includes("Viento") &&
-          !phrase.includes("nubes")
+          !phrase.includes("nubes") &&
+          phrase.split(" ").length < 3
         );
       });
       console.log(cityWeather);
