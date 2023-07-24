@@ -1,8 +1,7 @@
 import "./App.css";
 import Extract from "./Extract";
 import CityButtons from "./CityButtons";
-import CityWeather from "./CityWeather";
-import CityName from "./CityName";
+import City from "./City";
 import Card from "react-bootstrap/Card";
 import { useState } from "react";
 
@@ -22,14 +21,7 @@ function App() {
             <div className="buttons col-2">
               <CityButtons onClickCityButtons={onClickCityButtons} />
             </div>
-            <div className="col-10">
-              <Card.Subtitle>
-                <CityName city={selectedCity}></CityName>
-              </Card.Subtitle>
-              <Card.Title>
-                <CityWeather city={selectedCity}></CityWeather>
-              </Card.Title>
-            </div>
+            <City city={selectedCity}></City>
           </div>
         </Card.Body>
       </Card>
