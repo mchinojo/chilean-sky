@@ -2,12 +2,10 @@ import "./CityName.css";
 import React, { useState, useEffect } from "react";
 import fetchCityWeather from "./fetchCityWeather";
 
-function CityName() {
+function CityName(props) {
   const [show, setShow] = useState(false);
   const [nameArray, setNameArray] = useState([]);
-
-  // this city should come from react router
-  const city = "santo-domingo";
+  const city = props.city;
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -22,8 +20,9 @@ function CityName() {
   useEffect(() => {
     fetchCityWeather(city).then(function (response) {
       setNameArray(response.cityName);
+      console.log(nameArray);
     });
-  }, []);
+  }, [city]);
 
   return (
     <div className={`title fade-in-title ${show ? "visible-title" : ""}`}>

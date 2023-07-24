@@ -12,11 +12,11 @@ app.use(cors());
 app.use(express.static("public"));
 
 // Function to fetch local server city weather
-function localServerCityWeather(city) {
-  const urlData = cityJson[city].urlData;
+function localServerCityWeather(cityID) {
+  const urlWeather = cityJson[cityID].urlWeather;
 
   return axios
-    .get(urlData)
+    .get(urlWeather)
     .then(function (response) {
       const dom = new JSDOM(response.data);
       const tafs = [

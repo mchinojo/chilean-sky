@@ -11,7 +11,6 @@ function CityWeather(props) {
     setShow(false);
     setWeather();
 
-    console.log("Fetching data...");
     fetchCityWeather(city).then(function (response) {
       console.log(response);
       setWeather(response.cityWeather[0]);

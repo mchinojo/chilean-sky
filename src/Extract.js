@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Gradient from "./Gradient";
 import fetchCityWeather from "./fetchCityWeather";
+import cities from "./components/data/cities.json";
 
 const getPixelColor = (imageWidth, x, y, pixelData) => {
   let pixelIndex = imageWidth * y + x;
@@ -36,7 +37,8 @@ function Extract({ city }) {
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const pixelData = imageData.data;
     let imageWidth = canvas.width;
-    let yValues = [5, 172, 340];
+    let yValues = cities[city].yValues;
+    console.log(yValues);
     let colors = yValues.map((y) =>
       getHexCodeFromPixels(imageWidth, y, pixelData)
     );
@@ -44,6 +46,7 @@ function Extract({ city }) {
   }
 
   useEffect(() => {
+    console.log("extrayendo colores de ", city);
     fetchCityWeather(city).then(function (response) {
       const colors = response.colors;
       setColorArray(colors);

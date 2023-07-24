@@ -24,7 +24,7 @@ function App() {
             </div>
             <div className="col-10">
               <Card.Subtitle>
-                <CityName></CityName>
+                <CityName city={selectedCity}></CityName>
               </Card.Subtitle>
               <Card.Title>
                 <CityWeather city={selectedCity}></CityWeather>

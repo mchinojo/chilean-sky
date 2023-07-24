@@ -1,16 +1,38 @@
 {
+    "chacalluta": {
+        "cityID": "chacalluta",
+        "cityName": "Chacalluta",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCAR",
+        "urlName": "https://aipchile.dgac.gob.cl/designador/SCAR",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/7",
+        "yValues": [
+            5,
+            158,
+            295
+        ]
+    },
     "santo-domingo": {
         "cityID": "santo-domingo",
         "cityName": "Santo Domingo",
-        "urlData": "https://aipchile.dgac.gob.cl/metar/SCSN",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCSN",
         "urlName": "https://aipchile.dgac.gob.cl/designador/SCSN",
-        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/40"
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/40",
+        "yValues": [
+            5,
+            172,
+            340
+        ]
     },
     "santiago": {
         "cityID": "santiago",
         "cityName": "Santiago",
-        "urlData": "https://aipchile.dgac.gob.cl/metar/SCEL",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCEL",
         "urlName": "https://aipchile.dgac.gob.cl/designador/SCEL",
-        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/12"
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/12",
+        "yValues": [
+            5,
+            106,
+            220
+        ]
     }
 }
