@@ -1,7 +1,8 @@
 {
-    "chacalluta": {
-        "cityID": "chacalluta",
-        "cityName": "Chacalluta",
+    "arica": {
+        "cityID": "arica",
+        "cityName": "Arica",
+        "location": "Arica, XV Región, Chile (18º 20' 55'' S, 70º 20' 19'' W)",
         "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCAR",
         "urlName": "https://aipchile.dgac.gob.cl/designador/SCAR",
         "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/7",
@@ -11,21 +12,49 @@
             295
         ]
     },
-    "santo-domingo": {
-        "cityID": "santo-domingo",
-        "cityName": "Santo Domingo",
-        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCSN",
-        "urlName": "https://aipchile.dgac.gob.cl/designador/SCSN",
-        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/40",
+    "iquique": {
+        "cityID": "iquique",
+        "cityName": "Iquique",
+        "location": "Iquique, I Región, Chile (20º 32' 07'' S, 70º 10' 53'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCDA",
+        "urlName": "https://aipchile.dgac.gob.cl/designador/SCDA",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/16",
         "yValues": [
             5,
-            172,
-            340
+            300,
+            555
+        ]
+    },
+    "calama": {
+        "cityID": "calama",
+        "cityName": "Calama",
+        "location": "Calama, II Región, Chile (22º 30' 00'' S, 68º 54' 11'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCCF",
+        "urlName": "https://aipchile.dgac.gob.cl/designador/SCCF",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/18",
+        "yValues": [
+            5,
+            170,
+            323
+        ]
+    },
+    "antofagasta": {
+        "cityID": "antofagasta",
+        "cityName": "Antofagasta",
+        "location": "Antofagasta, II Región, Chile (23º 26' 40'' S, 70º 26' 42'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCFA",
+        "urlName": "https://aipchile.dgac.gob.cl/designador/SCFA",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/20",
+        "yValues": [
+            5,
+            170,
+            313
         ]
     },
     "santiago": {
         "cityID": "santiago",
         "cityName": "Santiago",
+        "location": "Santiago, XIII Región, Chile (33º 23' 39'' S, 70º 47' 37'' W)",
         "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCEL",
         "urlName": "https://aipchile.dgac.gob.cl/designador/SCEL",
         "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/12",
@@ -33,6 +62,19 @@
             5,
             106,
             220
+        ]
+    },
+    "santo-domingo": {
+        "cityID": "santo-domingo",
+        "cityName": "Santo Domingo",
+        "location": "Santo Domingo, V Región, Chile (33º 39' 24'' S, 71º 36' 57'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCSN",
+        "urlName": "https://aipchile.dgac.gob.cl/designador/SCSN",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/40",
+        "yValues": [
+            5,
+            172,
+            340
         ]
     }
 }

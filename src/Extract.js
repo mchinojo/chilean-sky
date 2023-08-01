@@ -14,8 +14,8 @@ const getPixelColor = (imageWidth, x, y, pixelData) => {
   };
 };
 
-const getHexCodeFromPixels = (imageWidth, x, pixelData) => {
-  let pixelColor = getPixelColor(imageWidth, 352, x, pixelData);
+const getHexCodeFromPixels = (imageWidth, y, pixelData) => {
+  let pixelColor = getPixelColor(imageWidth, imageWidth / 2, y, pixelData);
   let hexCode = `#${[pixelColor.red, pixelColor.green, pixelColor.blue]
     .map((code) => code.toString(16).padStart(2, "0"))
     .join("")}`;
@@ -38,7 +38,6 @@ function Extract({ city }) {
     const pixelData = imageData.data;
     let imageWidth = canvas.width;
     let yValues = cities[city].yValues;
-    console.log(yValues);
     let colors = yValues.map((y) =>
       getHexCodeFromPixels(imageWidth, y, pixelData)
     );
@@ -46,7 +45,6 @@ function Extract({ city }) {
   }
 
   useEffect(() => {
-    console.log("extrayendo colores de ", city);
     fetchCityWeather(city).then(function (response) {
       const colors = response.colors;
       setColorArray(colors);

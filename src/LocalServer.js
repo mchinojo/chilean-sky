@@ -25,16 +25,23 @@ function localServerCityWeather(cityID) {
       const cityWeatherArray = tafs.map((text) => {
         return text.innerHTML.trim();
       });
-      const cityWeather = cityWeatherArray.filter((phrase) => {
-        return (
-          !phrase.includes(":") &&
-          !phrase.includes("Viento") &&
-          !phrase.includes("nubes") &&
-          phrase.split(" ").length < 3
-        );
-      });
-      console.log(cityWeather);
-      return cityWeather;
+      // const cityWeather = cityWeatherArray.filter((phrase) => {
+      //   return (
+      //     !phrase.includes(":") &&
+      //     !phrase.includes("Viento") &&
+      //     !phrase.includes("nubes") &&
+      //     phrase.split(" ").length < 3
+      //   );
+      // });
+      // console.log(cityWeather);
+
+      // console.log(cityWeatherArray);
+      // const matchedWeather = cityWeatherArray.find((weather) =>
+      //   weatherOptions.includes(weather)
+      // );
+
+      // return matchedWeather ? matchedWeather : ["Despejado"];
+      return cityWeatherArray;
     })
     .catch(function (error) {
       console.log(error);
