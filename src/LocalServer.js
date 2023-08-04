@@ -25,22 +25,7 @@ function localServerCityWeather(cityID) {
       const cityWeatherArray = tafs.map((text) => {
         return text.innerHTML.trim();
       });
-      // const cityWeather = cityWeatherArray.filter((phrase) => {
-      //   return (
-      //     !phrase.includes(":") &&
-      //     !phrase.includes("Viento") &&
-      //     !phrase.includes("nubes") &&
-      //     phrase.split(" ").length < 3
-      //   );
-      // });
-      // console.log(cityWeather);
-
-      // console.log(cityWeatherArray);
-      // const matchedWeather = cityWeatherArray.find((weather) =>
-      //   weatherOptions.includes(weather)
-      // );
-
-      // return matchedWeather ? matchedWeather : ["Despejado"];
+      
       return cityWeatherArray;
     })
     .catch(function (error) {
@@ -48,27 +33,27 @@ function localServerCityWeather(cityID) {
     });
 }
 
-// Function to fetch local server city name
-function localServerCityName(city) {
-  const urlName = cityJson[city].urlName;
+// Function to fetch local server city location
+// function localServerCityName(city) {
+//   const urlName = cityJson[city].urlName;
 
-  return axios
-    .get(urlName)
-    .then(function (response) {
-      const dom = new JSDOM(response.data);
-      const cityName = dom.window.document
-        .querySelector("#ubicacion + td")
-        .innerHTML.split("\n")
-        .map((text) => {
-          return text.trim().replace("<!--<br/>-->", "");
-        });
+//   return axios
+//     .get(urlName)
+//     .then(function (response) {
+//       const dom = new JSDOM(response.data);
+//       const cityName = dom.window.document
+//         .querySelector("#ubicacion + td")
+//         .innerHTML.split("\n")
+//         .map((text) => {
+//           return text.trim().replace("<!--<br/>-->", "");
+//         });
 
-      return cityName;
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-}
+//       return cityName;
+//     })
+//     .catch(function (error) {
+//       console.log(error);
+//     });
+// }
 
 // Function to fetch current image
 function fetchCurrentImage(url) {
@@ -109,8 +94,9 @@ app.get("/api/city-weather/:city", async (req, res) => {
   const city = req.params.city;
   console.log(city);
   const cityWeather = await localServerCityWeather(city);
-  const cityName = await localServerCityName(city);
-  return res.send({ cityWeather, cityName });
+  // const cityName = await localServerCityName(city);
+  // return res.send({ cityWeather, cityName });
+  return res.send({ cityWeather });
 });
 
 // Server setup

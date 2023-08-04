@@ -18,10 +18,10 @@ function App() {
       <Card>
         <Card.Body>
           <div className="row">
+            <City city={selectedCity}></City>
             <div className="buttons col-2">
               <CityButtons onClickCityButtons={onClickCityButtons} />
             </div>
-            <City city={selectedCity}></City>
           </div>
         </Card.Body>
       </Card>

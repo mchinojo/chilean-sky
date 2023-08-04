@@ -1,4 +1,4 @@
-.centered {
+.weather-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -6,32 +6,40 @@
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 300;
   font-size: 3.5rem;
-  color: wheat;
 }
 
-.fade-in {
+.weather-fade-in {
   opacity: 0;
-  transition: opacity 3s ease-in;
+  transition: opacity 5s ease-in;
 }
 
-.visible {
+.weather-visible {
   opacity: 1;
 }
 
-.title {
+.location-text {
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
-  color: wheat;
-  position: absolute;
-  left: 28%;
+  text-align: center;
+  /* left: 28%; */
 }
 
-.fade-in-title {
+.location-fade-in {
   opacity: 0;
   transition: opacity 1s ease-in;
 }
 
-.visible-title {
+.location-visible {
   opacity: 1;
+}
+
+
+.morning {
+color: (255, 243, 208);
+}
+
+.night {
+color: (84, 73, 139);
+
 }
