@@ -59,7 +59,7 @@ function Extract({ city }) {
         id="skyImage"
         alt="sky"
         crossOrigin="Anonymous"
-        src={`http://localhost:8080/current-image/${city}`}
+        src={`/.netlify/functions/current-image?city=${city}`}
         // src="https://picsum.photos/704/480"
         onLoad={handleImageLoad}
         style={{ display: "none" }}
