@@ -48,7 +48,7 @@ function City(props) {
       setWeather(matchedWeather ? matchedWeather : ["Despejado"]);
       setShow(true);
     });
-  }, [city]);
+  }, [city, cityJson.location]);
 
   return (
     <div className={`${getCurrentTimeOfDay()}`}>
