@@ -1,0 +1,4 @@
+.city-list-container {
+  height: 130px;
+  overflow-y: auto;
+}

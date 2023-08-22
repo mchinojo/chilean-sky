@@ -25,15 +25,16 @@ function City(props) {
   const city = props.city;
   const cityJson = cities[city];
 
-
   const getCurrentTimeOfDay = () => {
-    const chileTime = new Date().toLocaleString("en-US", { timeZone: "America/Santiago" });
+    const chileTime = new Date().toLocaleString("en-US", {
+      timeZone: "America/Santiago",
+    });
     const currentHour = new Date(chileTime).getHours();
-    return currentHour >= 8 && currentHour < 19 ? "morning" : "night";
+    return currentHour >= 9 && currentHour < 19 ? "morning" : "night";
   };
 
   useEffect(() => {
-    setShow(false);
+    setShow(false); // Hide content
     setWeather();
     fetchCityWeather(city).then(function (response) {
       console.log("La data de ", city, "es ", response);
@@ -46,19 +47,24 @@ function City(props) {
       setShowLocation(cityJson.location);
 
       setWeather(matchedWeather ? matchedWeather : ["Despejado"]);
-      setShow(true);
+      // Show content after a delay
     });
+    setShow(true);
   }, [city]);
 
   return (
     <div className={`${getCurrentTimeOfDay()}`}>
       <Card.Subtitle>
-        <div className={`location-text location-fade-in ${show ? "location-visible" : ""}`}>
+        <div
+          className={`location-text location-fade-in ${
+            show ? "location-visible" : ""
+          }`}
+        >
           {showLocation}
         </div>
       </Card.Subtitle>
       <Card.Title>
-        <div className={`weather-text weather-fade-in ${show ? "weather-visible" : ""}`}>
+        <div className={`weather-text ${show ? "weather-visible" : ""}`}>
           {show && weather ? weather : ""}
           {show && !weather ? "" : ""}
         </div>

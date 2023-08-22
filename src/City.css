@@ -27,19 +27,17 @@
 
 .location-fade-in {
   opacity: 0;
-  transition: opacity 1s ease-in;
+  transition: opacity 5s ease-in;
 }
 
 .location-visible {
   opacity: 1;
 }
 
-
 .morning {
-color: (255, 243, 208);
+  color: rgb(84, 73, 139);
 }
 
 .night {
-color: (84, 73, 139);
-
+  color: rgb(255, 243, 208);
 }

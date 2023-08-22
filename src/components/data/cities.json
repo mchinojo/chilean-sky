@@ -4,7 +4,6 @@
         "cityName": "Arica",
         "location": "Arica, XV Región, Chile (18º 20' 55'' S, 70º 20' 19'' W)",
         "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCAR",
-        "urlName": "https://aipchile.dgac.gob.cl/designador/SCAR",
         "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/7",
         "yValues": [
             5,
@@ -17,7 +16,6 @@
         "cityName": "Iquique",
         "location": "Iquique, I Región, Chile (20º 32' 07'' S, 70º 10' 53'' W)",
         "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCDA",
-        "urlName": "https://aipchile.dgac.gob.cl/designador/SCDA",
         "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/16",
         "yValues": [
             5,
@@ -43,7 +41,6 @@
         "cityName": "Antofagasta",
         "location": "Antofagasta, II Región, Chile (23º 26' 40'' S, 70º 26' 42'' W)",
         "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCFA",
-        "urlName": "https://aipchile.dgac.gob.cl/designador/SCFA",
         "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/20",
         "yValues": [
             5,
@@ -51,12 +48,59 @@
             313
         ]
     },
+    "caldera": {
+        "cityID": "caldera",
+        "cityName": "Caldera",
+        "location": "Caldera, III Región, Chile (27º 15' 42'' S, 70º 46' 45'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCAT",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/22",
+        "yValues": [
+            5,
+            150,
+            282
+        ]
+    },
+    "isla de pascua": {
+        "cityID": "isla de pascua",
+        "cityName": "Isla de Pascua",
+        "location": "Isla de Pascua, V Región, Chile (27º 09' 53'' S, 109º 25' 19'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCIP",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/26",
+        "yValues": [
+            5,
+            330,
+            626
+        ]
+    },
+    "la serena": {
+        "cityID": "la serena",
+        "cityName": "La Serena",
+        "location": "La Serena , IV Región, Chile (29º 54' 59'' S, 71º 11' 58'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCSE",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/27",
+        "yValues": [
+            5,
+            140,
+            293
+        ]
+    },
+    "viña del mar": {
+        "cityID": "viña del mar",
+        "cityName": "Viña del Mar",
+        "location": "Viña del Mar, V Región, Chile (32º 56' 59'' S, 71º 28' 43'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCVM",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/121",
+        "yValues": [
+            5,
+            120,
+            225
+        ]
+    },
     "santiago": {
         "cityID": "santiago",
         "cityName": "Santiago",
         "location": "Santiago, XIII Región, Chile (33º 23' 39'' S, 70º 47' 37'' W)",
         "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCEL",
-        "urlName": "https://aipchile.dgac.gob.cl/designador/SCEL",
         "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/12",
         "yValues": [
             5,
@@ -69,12 +113,251 @@
         "cityName": "Santo Domingo",
         "location": "Santo Domingo, V Región, Chile (33º 39' 24'' S, 71º 36' 57'' W)",
         "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCSN",
-        "urlName": "https://aipchile.dgac.gob.cl/designador/SCSN",
         "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/40",
         "yValues": [
             5,
             172,
             340
+        ]
+    },
+    "juan-fernandez": {
+        "cityID": "juan-fernandez",
+        "cityName": "Juan Fernández",
+        "location": "Juan Fernández, V Región, Chile (33º 39' 57'' S, 78º 55' 45'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCIR",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/69",
+        "yValues": [
+            5,
+            150,
+            253
+        ]
+    },
+    "rancagua": {
+        "cityID": "rancagua",
+        "cityName": "Rancagua",
+        "location": "Rancagua, VI Región, Chile (34º 10' 30'' S, 70º 46' 32'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCRG",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/43",
+        "yValues": [
+            5,
+            200,
+            400
+        ]
+    },
+    "chillan": {
+        "cityID": "chillan",
+        "cityName": "Chillán",
+        "location": "Chillán, VIII Región, Chile (36º 34' 58'' S, 72º 01' 54'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCCH",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/49",
+        "yValues": [
+            5,
+            383,
+            753
+        ]
+    },
+    "concepcion": {
+        "cityID": "concepcion",
+        "cityName": "Concepción",
+        "location": "Concepción, VIII Región, Chile (36º 46' 17'' S, 73º 03' 45'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCIE",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/68",
+        "yValues": [
+            5,
+            160,
+            317
+        ]
+    },
+    "freire": {
+        "cityID": "freire",
+        "cityName": "Freire",
+        "location": "Freire, IX Región, Chile (38º 55' 33'' S, 72º 39' 05'' W) ",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCIR",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/69",
+        "yValues": [
+            5,
+            126,
+            248
+        ]
+    },
+    "valdivia": {
+        "cityID": "valdivia",
+        "cityName": "Valdivia",
+        "location": "Valdivia, XIV Región, Chile (39º 38' 58'' S, 73º 05' 11'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCVD",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/53",
+        "yValues": [
+            5,
+            130,
+            246
+        ]
+    },
+    "osorno": {
+        "cityID": "osorno",
+        "cityName": "Osorno",
+        "location": "Osorno, X Región, Chile (40º 36' 41'' S, 73º 03' 38'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCJO",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/55",
+        "yValues": [
+            5,
+            143,
+            284
+        ]
+    },
+    "puerto-montt": {
+        "cityID": "puerto-montt",
+        "cityName": "puerto-montt",
+        "location": "Puerto Montt, X Región, Chile (41º 26' 20'' S, 73º 05' 38'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCTE",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/58",
+        "yValues": [
+            5,
+            160,
+            302
+        ]
+    },
+    "dalcahue": {
+        "cityID": "dalcahue",
+        "cityName": "Dalcahue",
+        "location": "Dalcahue, X Región, Chile (42º 20' 25'' S, 73º 42' 57'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCPQ",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/137",
+        "yValues": [
+            5,
+            475,
+            890
+        ]
+    },
+    "chaiten": {
+        "cityID": "chaiten",
+        "cityName": "Chaitén",
+        "location": "Chaitén, X Región, Chile (42º 46' 55'' S, 72º 50' 06'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCTN",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/14",
+        "yValues": [
+            5,
+            146,
+            284
+        ]
+    },
+    "futaleufu": {
+        "cityID": "futaleufu",
+        "cityName": "Futaleufú",
+        "location": "Futaleufú, X Región, Chile (43º 11' 09'' S, 71º 51' 02'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCFT",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/77",
+        "yValues": [
+            5,
+            170,
+            309
+        ]
+    },
+    "puerto-aysen": {
+        "cityID": "puerto-aysen",
+        "cityName": "Puerto Aysén",
+        "location": "Puerto Aisén, XI Región, Chile (45º 23' 57'' S, 72º 40' 12'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCAS",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/146",
+        "yValues": [
+            5,
+            160,
+            281
+        ]
+    },
+    "coyhaique": {
+        "cityID": "coyhaique",
+        "cityName": "Coyhaique",
+        "location": "Coyhaique, XI Región, Chile (45º 35' 37'' S, 72º 06' 19'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCCY",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/87",
+        "yValues": [
+            5,
+            292,
+            560
+        ]
+    },
+    "chile-chico": {
+        "cityID": "chile-chico",
+        "cityName": "Chile Chico",
+        "location": "Chile Chico, XI Región, Chile (46º 34' 58'' S, 71º 41' 12'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCCC",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/91",
+        "yValues": [
+            5,
+            153,
+            303
+        ]
+    },
+    "cochrane": {
+        "cityID": "cochrane",
+        "cityName": "Cochrane",
+        "location": "Cochrane, XI Región, Chile (47º 14' 37'' S, 72º 35' 16'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCHR",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/92",
+        "yValues": [
+            5,
+            106,
+            213
+        ]
+    },
+    "natales": {
+        "cityID": "natales",
+        "cityName": "Natales",
+        "location": "Natales, XII Región, Chile (51º 40' 15'' S, 72º 31' 43'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCNT",
+        "urlImage": "",
+        "yValues": [
+            5,
+            95,
+            185
+        ]
+    },
+    "punta-arenas": {
+        "cityID": "punta-arenas",
+        "cityName": "Punta Arenas",
+        "location": "Punta Arenas, XII Región, Chile (53º 00' 13'' S, 70º 51' 13'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCCI",
+        "urlImage": "",
+        "yValues": [
+            5,
+            277,
+            545
+        ]
+    },
+    "porvenir": {
+        "cityID": "porvenir",
+        "cityName": "Porvenir",
+        "location": "Porvenir, XII Región, Chile (53º 15' 13'' S, 70º 19' 09'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCFM",
+        "urlImage": "",
+        "yValues": [
+            5,
+            235,
+            467
+        ]
+    },
+    "puerto-williams": {
+        "cityID": "puerto-williams",
+        "cityName": "Puerto Williams",
+        "location": "Puerto Williams, XII Región, Chile (54º 55' 52'' S, 67º 37' 34'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCGZ",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/101",
+        "yValues": [
+            5,
+            164,
+            293
+        ]
+    },
+    "antartica": {
+        "cityID": "antartica",
+        "cityName": "Antártica",
+        "location": "Antártica, XII Región, Chile (62º 11' 27'' S, 58º 59' 12'' W)",
+        "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCRM",
+        "urlImage": "",
+        "yValues": [
+            5,
+            158,
+            305
         ]
     }
 }
