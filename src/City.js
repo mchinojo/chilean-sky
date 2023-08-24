@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import fetchCityWeather from "./fetchCityWeather";
-import Card from "react-bootstrap/Card";
 import cities from "./components/data/cities.json";
+import Card from "react-bootstrap/Card";
 import "./City.css";
 
 const weatherOptions = [
@@ -24,6 +24,7 @@ function City(props) {
   const [weather, setWeather] = useState("");
 
   const city = props.city;
+  const colors = props.colors;
   const cityJson = cities[city];
 
   const getCurrentTimeOfDay = () => {
