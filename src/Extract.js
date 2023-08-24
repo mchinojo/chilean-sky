@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Gradient from "./Gradient";
-import fetchCityWeather from "./fetchCityWeather";
 import cities from "./components/data/cities.json";
 
 const getPixelColor = (imageWidth, x, y, pixelData) => {
@@ -43,13 +42,6 @@ function Extract({ city }) {
     );
     setColorArray(colors);
   }
-
-  useEffect(() => {
-    fetchCityWeather(city).then(function (response) {
-      const colors = response.colors;
-      setColorArray(colors);
-    });
-  }, [city]);
 
   return (
     <div>

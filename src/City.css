@@ -9,12 +9,7 @@
 }
 
 .weather-fade-in {
-  opacity: 0;
   transition: opacity 5s ease-in;
-}
-
-.weather-visible {
-  opacity: 1;
 }
 
 .location-text {
@@ -25,13 +20,21 @@
   /* left: 28%; */
 }
 
-.location-fade-in {
-  opacity: 0;
+.fade-in {
   transition: opacity 5s ease-in;
 }
 
-.location-visible {
+.fade-out {
+  opacity: 0;
+  transition: opacity 5s ease-out;
+}
+
+.opacity-visible {
   opacity: 1;
+}
+
+.opacity-invisible {
+  opacity: 0;
 }
 
 .morning {
