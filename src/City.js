@@ -36,8 +36,8 @@ function City(props) {
 
   useEffect(() => {
     setShow(false); // Hide content
-    setWeather("");
-    setLocation("");
+    // setWeather("");
+    // setLocation("");
 
     fetchCityWeather(city).then(function (response) {
       console.log("La data de ", city, "es ", response);
@@ -51,6 +51,7 @@ function City(props) {
 
       setWeather(matchedWeather ? matchedWeather : "Despejado");
       // Show content after a delay
+
       setShow(true);
     });
   }, [city, cityJson.location]);
@@ -60,7 +61,7 @@ function City(props) {
       <Card.Subtitle>
         <div
           className={`location-text ${
-            show ? "fade-in opacity-visible" : "opacity-invisible"
+            show ? "fade-in opacity-visible" : "fade-out opacity-invisible"
           }`}
         >
           {location}
@@ -69,10 +70,10 @@ function City(props) {
       <Card.Title>
         <div
           className={`weather-text  ${
-            show ? "fade-in opacity-visible" : "opacity-invisible"
+            show ? "fade-in opacity-visible" : "fade-out opacity-invisible"
           }`}
         >
-          {show ? weather : ""}
+          {weather}
         </div>
       </Card.Title>
     </div>
