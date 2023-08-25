@@ -69,7 +69,7 @@
         "yValues": [
             5,
             330,
-            626
+            620
         ]
     },
     "la serena": {
@@ -206,7 +206,7 @@
     },
     "puerto-montt": {
         "cityID": "puerto-montt",
-        "cityName": "puerto-montt",
+        "cityName": "Puerto Montt",
         "location": "Puerto Montt, X Región, Chile (41º 26' 20'' S, 73º 05' 38'' W)",
         "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCTE",
         "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/58",
@@ -221,11 +221,11 @@
         "cityName": "Dalcahue",
         "location": "Dalcahue, X Región, Chile (42º 20' 25'' S, 73º 42' 57'' W)",
         "urlWeather": "https://aipchile.dgac.gob.cl/metar/SCPQ",
-        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/137",
+        "urlImage": "https://aipchile.dgac.gob.cl/camara/show/id/138",
         "yValues": [
             5,
-            475,
-            890
+            350,
+            700
         ]
     },
     "chaiten": {
